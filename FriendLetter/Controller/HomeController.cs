@@ -13,7 +13,11 @@ namespace FriendLetter.Controllers
     public string Goodbye() { return "Goodbye friend."; }
 
     [Route("/")]
-    public string Letter() { return "Our virtual postcard will go here soon!"; }
+    public string Letter() { 
+      LetterVariable myLetterVariable = new LetterVariable();
+      myLetterVariable.Recipient = "Lina";
+      return View(myLetterVariable);
+    }
 
   }
 }
