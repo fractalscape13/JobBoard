@@ -39,12 +39,15 @@ namespace FriendLetter
           name: "default",
           template: "{controller=Home}/{action=Index}/{id?}");
       });
-      
+
       // Not actually required to successfully launch our project. However, it will allow us to test that our Configure() method is working properly.
       app.Run(async (context) =>
       {
         await context.Response.WriteAsync("Hello World!");
       });
+
+      // Useful for debugging. Will produce a friendly error report if Razor fails to load.
+      app.UseDeveloperExceptionPage();
     }
 
   }
