@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Friend!</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    @using JobBoard.Models;
+
+    @if(Model.Count == 0)
+    {
+      <p>Welcome! Your list of job postings is empty</p>
+    }
+    else
+    { 
+      <form action="/jobboard/delete" method="post">
+      @foreach(JobOpening job in Model)
+      {
+        <input type="radio" id="@job.Id" name="id" value="@job.Id">
+        <label for="male"><a href="/jobboard/@job.Id">@job.Title</a><br></label><br>
+        
+      }
+        <button type="submit">Delete job</button>
+      </form>
+    }
+    <br><p><a href="/jobboard/new">Click here</a> to add another job</p>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace FriendLetter
+namespace JobBoard
 {
   public class Program
   {

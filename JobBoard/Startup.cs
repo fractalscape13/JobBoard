@@ -1,6 +1,3 @@
-// This file is required in every ASP.NET Core MVC project. It provides instructions on compiling and running a web application.
-
-// These import built-in .NET namespaces that are required for creating a web application. They can help us construct HTTP requests, configure our project, and ensure necessary built-in functionality is present in the correct areas.
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -8,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace FriendLetter
+namespace JobBoard
 {
   public class Startup
   {
